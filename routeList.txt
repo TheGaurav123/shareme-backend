@@ -1,0 +1,2 @@
+Download - http://localhost:4000/api/files/:uuid
+Upload - http://localhost:4000/api/upload
