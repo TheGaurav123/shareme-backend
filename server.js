@@ -23,7 +23,7 @@ app.use('/api/files/', download) //Download Route
 
 // Scheduler 
 setInterval(() => {
-    require('./scheduler/scheduler')().then(()=>process.exit())
+    require('./scheduler/scheduler')().then(process.exit())
 }, (24 * 60 * 60 * 1000));
 
 
