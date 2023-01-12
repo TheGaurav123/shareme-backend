@@ -19,13 +19,10 @@ app.use('/api/files/', download) //Download Route
 
 
 
-// Scheduler 
-setInterval(() => {
-    require('./scheduler/scheduler')().then(process.exit())
-}, (24 * 60 * 60 * 1000));
-
-
-
 // Listener
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => console.log(`Server running at PORT:${PORT}`));
+
+
+// Scheduler
+require('./script')

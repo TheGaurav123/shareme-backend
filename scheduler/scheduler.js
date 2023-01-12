@@ -1,7 +1,8 @@
 const fileModel = require("../models/files");
 const fs = require("fs");
+require('../config/db')
 
-const schduler = async () => {
+const scheduler = async () => {
   const pastDate = new Date(Date.now() - 24 * 60 * 60 * 1000);
   const files = await fileModel.find({ createdAt: { $lt: pastDate } });
 
@@ -18,4 +19,4 @@ const schduler = async () => {
   }
 };
 
-module.exports = schduler;
+module.exports = scheduler;
