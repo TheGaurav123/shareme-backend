@@ -23,6 +23,3 @@ app.use('/api/files/', download) //Download Route
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => console.log(`Server running at PORT:${PORT}`));
 
-
-// Scheduler
-require('./script')
